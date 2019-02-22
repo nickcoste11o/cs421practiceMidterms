@@ -64,7 +64,14 @@ countCons (Cons x xs) = 1 + countCons xs
 -- [EXAMPLE] Main> mydropWhile (< 3) [1,2,3,4,5,1,2,3] -> [3,4,5,1,2,3]
 
 mydropWhile :: (a -> Bool) -> [a] -> [a]
-mydropWhile = undefined
+
+mydropWhile _ [] = []
+mydropWhile f (x:xs)
+            | (f x) = mydropWhile f xs
+            | otherwise = (x:xs)
+
+------------------------------------------------------------------------------------------------------
+
 
 
 
