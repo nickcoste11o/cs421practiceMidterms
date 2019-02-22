@@ -100,6 +100,24 @@ aboveFive (x:xs) = filter (>5) (x:xs)
 -- Step 2: (\bz.zbc)(\x.x)    (Swap (\x.x) in for all b's)
 -- Step 3: (\z.z(\x.x)c)      (This is the step we are looking for thus D is correct answer)
 
+------------------------------------------------------------------------------------------------------
+-- Question 7
+
+-- Convert the functions max and max3 into equivalent CPS functions maxk and max3k. You may use neither
+-- max nor max3 in your definition of either of the CPS functions, and both maxk and max3k must be in
+-- full Continuation-Passing Style. You may assume primitive functions such as +, -, /, and * do not
+-- need to be in CPS. Other functions you wish to use must be defined by you and written in Continuation
+-- Passing Style (e.g., mod to modk).
+
+-- max a b = if a > b then a else b
+-- max3 a b c = 9 + max a (max b c)
+
+-- (Not 100% sure on these)
+-- maxk a b k = if a > b then k a else k b
+-- max3k a b c k = 9 + maxk b c (\v -> maxk a v k)
+
+------------------------------------------------------------------------------------------------------
+-- Question 8
 
 
 
