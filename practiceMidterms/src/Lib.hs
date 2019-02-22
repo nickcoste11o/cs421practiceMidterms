@@ -84,8 +84,21 @@ aboveFive [] = []
 aboveFive (x:xs) = filter (>5) (x:xs)
 
 ------------------------------------------------------------------------------------------------------
+-- Question 6
 
+-- Consider the following lambda calculus expression: (\abc.cba)c(\x.x)
+-- Which of the following expressions could be part of a valid reduction sequence of the above expression? You may perform
+-- α conversion only when necessary.
 
+-- a) \a.(\x.x)bc
+-- b) \c.c(\x.x)c
+-- c) \x.x
+-- d) \z.z(\x.x)c
+
+-- Step 0: (\abc.cba)c(\x.x)
+-- Step 1: (\abz.zba)c(\x.x)  (Change c variable to z because we will be putting the outside c into the parenthesis and dont want them to have same name)
+-- Step 2: (\bz.zbc)(\x.x)    (Swap (\x.x) in for all b's)
+-- Step 3: (\z.z(\x.x)c)      (This is the step we are looking for thus D is correct answer)
 
 
 
