@@ -119,6 +119,30 @@ aboveFive (x:xs) = filter (>5) (x:xs)
 ------------------------------------------------------------------------------------------------------
 -- Question 8
 
+-- Consider this user-defined type.
+
+data Foo a = Foo a
+           | Bar
+  deriving Show
+
+-- Give the implementation of the Functor, Applicative, and Monad classes for this type. We've filled
+-- in the instance delcarations, all you have to do is provide definitions for the functions.
+
+data Foo a = Foo a
+           | Bar
+  deriving Show
+
+instance Functor Foo where
+   fmap = undefined
+
+instance Applicative Foo where
+   pure = undefined
+   (<*>) = undefined
+
+instance Monad Foo where
+   return = undefined
+   (>>=) = undefined
+
 
 
 
