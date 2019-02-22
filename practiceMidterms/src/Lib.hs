@@ -71,8 +71,19 @@ mydropWhile f (x:xs)
             | otherwise = (x:xs)
 
 ------------------------------------------------------------------------------------------------------
+-- Question 5
 
+-- Write a function aboveFive :: [Integer] -> [Integer] that returns the integers in the list which
+-- are greater than 5 in the order in which they appear in the original list. You may not use recursion.
+-- You must use higher-order functions.
+-- [EXAMPLE] > aboveFive [4,2,8,9,2,4,-10,15,5] -> [8,9,15]
 
+aboveFive :: [Integer] -> [Integer]
+
+aboveFive [] = []
+aboveFive (x:xs) = filter (>5) (x:xs)
+
+------------------------------------------------------------------------------------------------------
 
 
 
